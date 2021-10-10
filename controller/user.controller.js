@@ -3,6 +3,8 @@ const db = require("../db");
 class UserController {
   async createUser(req, res) {
     try {
+      console.log(process.env.DATABASE_URL);
+      console.log("DATABASE_URL", DATABASE_URL);
       const { name, surname } = req.body;
       const newPerson = await db.query(
         `INSERT INTO person (name, surname) values ($1, $2) RETURNING *`,
@@ -10,6 +12,8 @@ class UserController {
       );
       res.json(newPerson.rows[0]);
     } catch (error) {
+      console.log(process.env.DATABASE_URL);
+      console.log("DATABASE_URL er", DATABASE_URL);
       console.log(error);
     }
   }
