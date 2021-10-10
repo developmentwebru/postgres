@@ -19,7 +19,7 @@ const devConfig = {
 
 const proConfig = {
   connectionString: DATABASE_URL,
-  sslmode: "require",
+  ssl: true,
 };
 
 const pool = new Pool(proConfig);
