@@ -18,8 +18,7 @@ const devConfig = {
 // };
 
 const proConfig = {
-  connectionString:
-    "postgres://pinfognjoqksct:236ac34fce57dc0a4eb114d42ca0bdef5d88e7a5e81369ed110edcc9c50d0f01@ec2-52-7-228-45.compute-1.amazonaws.com:5432/d6vqdto88ecej",
+  connectionString: DATABASE_URL,
   ssl: true,
 };
 
